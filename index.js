@@ -9,16 +9,11 @@ passEl2 = document.getElementById("pass2")
 function generate() {
     passEl1.textContent = "";
     passEl2.textContent = "";
-    let pwdLength = Number(prompt("Enter the length of password (max 15): "))
 
-    if (pwdLength > 0 && pwdLength <= 15) {
-        for (let i = 0; i < pwdLength; i++) {
+    for (let i = 0; i < 15; i++) {
             passEl1.textContent += characters[randomNumber()];
             passEl2.textContent += characters[randomNumber()];
         }
-    } else {
-        alert("Please enter a valid integer between 1 and 15.");
-    }
 }
 
 
